@@ -4,7 +4,6 @@ from django.contrib import admin
 from todos.models import(
     TodoItem,
     TodoList,
-    TodoItem,
 )
 
 class TodoListAdmin(admin.ModelAdmin):
