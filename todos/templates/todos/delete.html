@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+</head>
+
+<body>
+    <main>
+        <div>
+            <h1>
+                Are you Sure?
+            </h1>
+            <form method="POST">
+                {% csrf_token %}
+                <button>Delete</button>
+            </form>
+        </div>
+    </main>
+</body>
+
+</html>

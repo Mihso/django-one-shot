@@ -13,6 +13,9 @@
             <p>
                 <a href="{% url 'update_todolist' todolist.id%}">Edit</a>
             </p>
+            <p>
+                <a href="{% url 'delete_todolist' todolist.id%}">Delete</a>
+            </p>
             <h2>Tasks</h2>
             <table>
                 <thead>
