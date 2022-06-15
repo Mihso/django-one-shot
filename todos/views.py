@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.views.generic.detail import DetailView
 from django.views.generic.list import ListView
 from todos.models import TodoList
 
@@ -7,7 +8,7 @@ class TodoListView(ListView):
     model = TodoList
     template_name = "todos/list.html"
     
-    def get_context_data(self,**kwargs):
-        context = {}
-        context["todo_list"] = TodoList.objects.all()
-        return context
+
+class TodoDetailView(DetailView):
+    model = TodoList
+    template_name = "todos/detail.html"
