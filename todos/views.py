@@ -42,3 +42,10 @@ class TodoCreateItemView(CreateView):
     def get_success_url(self):
 
         return reverse_lazy("show_todolist",args = [self.object.list.id])
+
+class TodoUpdateItemView(UpdateView):
+    model = TodoItem
+    template_name = "todoitem/update.html"
+    fields= ["task", "due_date", "is_completed", "list"]
+    def get_success_url(self):
+        return reverse_lazy("show_todolist", args = [self.object.list.id])
