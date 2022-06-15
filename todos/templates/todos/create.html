@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+</head>
+
+<body>
+    <div>
+        <h1>Create a new list</h1>
+        <form method="POST">
+            {% csrf_token %}
+            <input type="text" name="name">
+            <button>Create</button>
+        </form>
+    </div>
+</body>
+
+</html>
